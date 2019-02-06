@@ -1,0 +1,19 @@
+#!/bin/ksh
+#------------------------------------------------------------------------------#
+# File          :  .main.ksh
+# Desc          :  Dummy program for executing dwh scripts
+# Version       :  1.3
+# Date          :  8/11/00
+# Time          :  20:29:11
+# WhatString    :  @(#)DWH:.main.ksh 1.3
+# Modification  :  Auth:
+#               :  Date:
+#               :  Change:
+#               :  Desc:
+#------------------------------------------------------------------------------#
+
+. ~/prod/bin/.dwh.cfg
+. ~/prod/bin/.dwh_lib.ksh
+
+LibRun `basename $0` $*
+

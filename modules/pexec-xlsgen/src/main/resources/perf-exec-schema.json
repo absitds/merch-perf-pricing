@@ -1,0 +1,758 @@
+{
+	"columnDetails": {
+		"division_id": {
+			"ignoreInOutput": "true",
+			"inputType": "Integer"
+		},
+		"rpt_group": {
+			"ignoreInOutput": "true",
+			"inputType": "String"
+		},
+		"promo_no_allowance": {
+			"excelColumnName": "A",
+			"formula": "IF(AND(CN%1$d\u003e0,CE%1$d\u003d0),\"Y\",\"\")",
+			"inputType": "String"
+		},
+		"allow_no_promo": {
+			"excelColumnName": "B",
+			"formula": "IF(AND(SUM(BS%1$d,BX%1$d)\u003e0, CN%1$d\u003d0),\"Y\",\"\")",
+			"inputType": "String"
+		},
+		"missing_allowance": {
+			"excelColumnName": "C",
+			"inputType": "String"
+		},
+		"cost_change": {
+			"excelColumnName": "D",
+			"formula": "IF(AV%1$d\u003e0,\"Y\",\"\")",
+			"inputType": "String"
+		},
+		"ad_plan": {
+			"excelColumnName": "E",
+			"inputType": "String"
+		},
+		"less_10_promo": {
+			"excelColumnName": "F",
+			"formula": "IF(AND(CQ%1$d\u003e0,CQ%1$d\u003c0.%1$d),\"Y\",\"\")",
+			"inputType": "String"
+		},
+		"less_10_allowance": {
+			"excelColumnName": "G",
+			"formula": "IF(AND(CF%1$d\u003e0,CF%1$d\u003c0.%1$d),\"Y\",\"\")",
+			"inputType": "String"
+		},
+		"greater_100_pass_through": {
+			"excelColumnName": "H",
+			"formula": "IF(CU%1$d\u003e%1$d,\"Y\",\"\")",
+			"inputType": "String"
+		},
+		"t_09_retail": {
+			"excelColumnName": "I",
+			"formula": "IF(ROUND((BI%1$d-INT(BI%1$d)),2)\u003d0.09,\"Y\",\"\")",
+			"inputType": "String"
+		},
+		"lead_item": {
+			"excelColumnName": "J",
+			"formula": "IF(AS%1$d\u003d%1$d,\"Y\",\"\")",
+			"inputType": "String"
+		},
+		"dominant_price_area": {
+			"excelColumnName": "K",
+			"inputType": "String"
+		},
+		"t_oob": {
+			"excelColumnName": "L",
+			"formula": "IF(OR(AC%1$d\u003d2%1$d%1$d30,AC%1$d\u003d79893,AC%1$d\u003d58200,AC%1$d\u003d%1$d%1$d535,AC%1$d\u003d4%1$d303,AC%1$d\u003d4%1$d%1$d30),\"Y\",\"\")",
+			"inputType": "String"
+		},
+		"sskvi": {
+			"excelColumnName": "M",
+			"formula": "IFERROR(LEFT(INDEX('%2$s KVIs'!$D:$D,MATCH($AD%1$d,'%2$s KVIs'!$B:$B,0),1),1),\"\")",
+			"inputType": "String"
+		},
+		"group_cd": {
+			"excelColumnName": "N",
+			"inputType": "Short"
+		},
+		"group_nm": {
+			"excelColumnName": "O",
+			"inputType": "String"
+		},
+		"smic": {
+			"excelColumnName": "P",
+			"inputType": "String"
+		},
+		"smic_name": {
+			"excelColumnName": "Q",
+			"inputType": "String"
+		},
+		"rog": {
+			"excelColumnName": "R",
+			"inputType": "String"
+		},
+		"price_area_id": {
+			"excelColumnName": "S",
+			"inputType": "Integer"
+		},
+		"pa_name": {
+			"excelColumnName": "T",
+			"formula": "IFERROR(INDEX('%2$s PAs'!$C:$C,MATCH(RIGHT($R%1$d,4)&\"-\"&TEXT($S%1$d,\"00\"),'%2$s PAs'!$B:$B,0),1),\"Price Area \"&TEXT($S%1$d,\"00\"))",
+			"inputType": "String"
+		},
+		"pricing_role": {
+			"excelColumnName": "U",
+			"inputType": "String"
+		},
+		"oob_gap_id": {
+			"excelColumnName": "V",
+			"inputType": "String"
+		},
+		"div_promo_grp_cd": {
+			"excelColumnName": "W",
+			"inputType": "Integer"
+		},
+		"loc_common_retail_cd": {
+			"decimals": "0",
+			"digits": "5",
+			"excelColumnName": "X",
+			"inputType": "Decimal"
+		},
+		"vendor_name": {
+			"excelColumnName": "Y",
+			"inputType": "String"
+		},
+		"vend_nbr": {
+			"excelColumnName": "Z",
+			"inputType": "String"
+		},
+		"vend_sub_acct_nbr": {
+			"excelColumnName": "AA",
+			"inputType": "String"
+		},
+		"cost_area_id": {
+			"excelColumnName": "AB",
+			"inputType": "Short"
+		},
+		"manuf": {
+			"excelColumnName": "AC",
+			"inputType": "String"
+		},
+		"upc_id": {
+			"decimals": "0",
+			"digits": "13",
+			"excelColumnName": "AD",
+			"inputType": "Decimal"
+		},
+		"corp_item_cd": {
+			"decimals": "0",
+			"digits": "8",
+			"excelColumnName": "AE",
+			"inputType": "Decimal"
+		},
+		"item_description": {
+			"excelColumnName": "AF",
+			"inputType": "String"
+		},
+		"dst": {
+			"excelColumnName": "AG",
+			"inputType": "String"
+		},
+		"facility": {
+			"excelColumnName": "AH",
+			"inputType": "String"
+		},
+		"dst_stat": {
+			"excelColumnName": "AI",
+			"inputType": "String"
+		},
+		"rtl_stat": {
+			"excelColumnName": "AJ",
+			"inputType": "String"
+		},
+		"buyer_nm": {
+			"excelColumnName": "AK",
+			"inputType": "String"
+		},
+		"vend_conv_fctr": {
+			"excelColumnName": "AL",
+			"inputType": "Short"
+		},
+		"t_pack_whse_qty": {
+			"decimals": "0",
+			"digits": "10",
+			"excelColumnName": "AM",
+			"inputType": "Decimal"
+		},
+		"size_dsc": {
+			"excelColumnName": "AN",
+			"inputType": "String"
+		},
+		"row_offset": {
+			"ignoreInOutput": "true",
+			"excelColumnName": "AO",
+			"inputType": "String"
+		},
+		"upc_13_wk_avg_sales": {
+			"decimals": "2",
+			"digits": "18",
+			"excelColumnName": "AP",
+			"inputType": "Decimal"
+		},
+		"upc_13_wk_avg_qty": {
+			"decimals": "3",
+			"digits": "18",
+			"excelColumnName": "AQ",
+			"inputType": "Decimal"
+		},
+		"upc_13_wk_avg_rtl": {
+			"decimals": "3",
+			"digits": "18",
+			"excelColumnName": "AR",
+			"inputType": "Decimal"
+		},
+		"t_rank_by_rog_and_cpc": {
+			"ignoreInOutput": "true",
+			"excelColumnName": "AS",
+			"inputType": "Integer"
+		},
+		"pct_acv_stores": {
+			"decimals": "2",
+			"digits": "5",
+			"excelColumnName": "AT",
+			"formula": "IFERROR(AN%1$d/AO%1$d,\"\")",
+			"inputType": "Decimal"
+		},
+		"t_cpc_13_wk_avg_sales": {
+			"decimals": "2",
+			"digits": "18",
+			"excelColumnName": "AU",
+			"inputType": "Decimal"
+		},
+		"t_cpc_13_wk_avg_qty": {
+			"decimals": "3",
+			"digits": "18",
+			"excelColumnName": "AV",
+			"inputType": "Decimal"
+		},
+		"t_cpc_13_wk_avg_rtl": {
+			"decimals": "3",
+			"digits": "18",
+			"excelColumnName": "AW",
+			"inputType": "Decimal"
+		},
+		"pnd_cost_change_vnd": {
+			"decimals": "4",
+			"digits": "15",
+			"excelColumnName": "AX",
+			"inputType": "Decimal"
+		},
+		"pnd_ven_date_effective": {
+			"excelColumnName": "AY",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"new_recc_reg_retail": {
+			"excelColumnName": "AZ",
+			"formula": "IFERROR((AV%1$d/AY%1$d)*BI%1$d,\"\")",
+			"inputType": "String"
+		},
+		"vendor_unit_cost": {
+			"decimals": "3",
+			"digits": "10",
+			"excelColumnName": "BA",
+			"inputType": "Decimal"
+		},
+		"unit_item_billing_cost": {
+			"decimals": "3",
+			"digits": "10",
+			"excelColumnName": "BB",
+			"inputType": "Decimal"
+		},
+		"prev_retail_price_fctr": {
+			"decimals": "0",
+			"digits": "2",
+			"excelColumnName": "BC",
+			"inputType": "Decimal"
+		},
+		"previous_retail_price": {
+			"decimals": "2",
+			"digits": "7",
+			"excelColumnName": "BD",
+			"inputType": "Decimal"
+		},
+		"prev_retail_effective_date": {
+			"excelColumnName": "BE",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"pending_edlp_mult": {
+			"decimals": "0",
+			"digits": "2",
+			"excelColumnName": "BF",
+			"inputType": "Decimal"
+		},
+		"pending_edlp_retail": {
+			"decimals": "2",
+			"digits": "7",
+			"excelColumnName": "BG",
+			"inputType": "Decimal"
+		},
+		"pending_edlp_chg_date": {
+			"excelColumnName": "BH",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"pending_gp_pctg": {
+			"excelColumnName": "BI",
+			"formula": "IFERROR(((BE%1$d/BD%1$d)-AZ%1$d)/(BE%1$d/BD%1$d),\"\")",
+			"inputType": "String"
+		},
+		"reg_retail_price_fctr": {
+			"decimals": "0",
+			"digits": "2",
+			"excelColumnName": "BJ",
+			"inputType": "Decimal"
+		},
+		"reg_retail": {
+			"decimals": "2",
+			"digits": "10",
+			"excelColumnName": "BK",
+			"inputType": "Decimal"
+		},
+		"t_price_per": {
+			"decimals": "3",
+			"digits": "10",
+			"excelColumnName": "BL",
+			"inputType": "Decimal"
+		},
+		"t_unit": {
+			"excelColumnName": "BM",
+			"inputType": "String"
+		},
+		"reg_gp_pctg": {
+			"excelColumnName": "BN",
+			"formula": "IFERROR(((BI%1$d/BH%1$d)-AZ%1$d)/(BI%1$d/BH%1$d),\"\")",
+			"inputType": "String"
+		},
+		"case_allow_count": {
+			"excelColumnName": "BO",
+			"inputType": "Integer"
+		},
+		"case_allow_amt": {
+			"decimals": "4",
+			"digits": "15",
+			"excelColumnName": "BP",
+			"inputType": "Decimal"
+		},
+		"case_allow_amt_per_unit": {
+			"decimals": "4",
+			"digits": "15",
+			"excelColumnName": "BQ",
+			"inputType": "Decimal"
+		},
+		"case_start_date": {
+			"excelColumnName": "BR",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"case_end_date": {
+			"excelColumnName": "BS",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"s2s_allow_count": {
+			"excelColumnName": "BT",
+			"inputType": "Integer"
+		},
+		"s2s_allow_amt": {
+			"decimals": "4",
+			"digits": "15",
+			"excelColumnName": "BU",
+			"inputType": "Decimal"
+		},
+		"s2s_allow_amt_per_unit": {
+			"decimals": "4",
+			"digits": "15",
+			"excelColumnName": "BV",
+			"inputType": "Decimal"
+		},
+		"s2s_start_date": {
+			"excelColumnName": "BW",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"s2s_end_date": {
+			"excelColumnName": "BX",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"scan_allow_count": {
+			"excelColumnName": "BY",
+			"inputType": "Integer"
+		},
+		"scan_allow_amt": {
+			"decimals": "4",
+			"digits": "15",
+			"excelColumnName": "BZ",
+			"inputType": "Decimal"
+		},
+		"scan_start_date": {
+			"excelColumnName": "CA",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"scan_end_date": {
+			"excelColumnName": "CB",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"redem_scan_allow_count": {
+			"excelColumnName": "CC",
+			"inputType": "Integer"
+		},
+		"redem_allow_amt": {
+			"decimals": "4",
+			"digits": "15",
+			"excelColumnName": "CD",
+			"inputType": "Decimal"
+		},
+		"redem_start_date": {
+			"excelColumnName": "CE",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"redem_end_date": {
+			"excelColumnName": "CF",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"total_allow_unit": {
+			"decimals": "4",
+			"digits": "15",
+			"excelColumnName": "CG",
+			"inputType": "Decimal"
+		},
+		"t_allowance_pctg": {
+			"decimals": "2",
+			"digits": "5",
+			"excelColumnName": "CH",
+			"formula": "IFERROR(CE%1$d/AY%1$d,\"\")",
+			"inputType": "Decimal"
+		},
+		"net_cost_with_allow": {
+			"excelColumnName": "CI",
+			"formula": "AY%1$d-CE%1$d",
+			"inputType": "String"
+		},
+		"promo_multiple": {
+			"decimals": "0",
+			"digits": "3",
+			"excelColumnName": "CJ",
+			"inputType": "Decimal"
+		},
+		"promo_price": {
+			"decimals": "4",
+			"digits": "10",
+			"excelColumnName": "CK",
+			"inputType": "Decimal"
+		},
+		"coupon_method": {
+			"excelColumnName": "CL",
+			"inputType": "String"
+		},
+		"min_purch": {
+			"decimals": "0",
+			"digits": "2",
+			"excelColumnName": "CM",
+			"inputType": "Decimal"
+		},
+		"limit_per_txn": {
+			"excelColumnName": "CN",
+			"inputType": "Short"
+		},
+		"promo_gp_pctg": {
+			"excelColumnName": "CO",
+			"inputType": "String",
+			"formula": "IFERROR((CN%1$d-CG%1$d)/CN%1$d,\"\")"
+		},
+		"net_promo_price": {
+			"decimals": "2",
+			"digits": "10",
+			"excelColumnName": "CP",
+			"inputType": "Decimal"
+		},
+		"price_per": {
+			"decimals": "3",
+			"digits": "10",
+			"excelColumnName": "CQ",
+			"inputType": "Decimal"
+		},
+		"t2_unit": {
+			"excelColumnName": "CR",
+			"inputType": "String"
+		},
+		"t_markdown_pctg": {
+			"decimals": "2",
+			"digits": "15",
+			"excelColumnName": "CS",
+			"formula":"IFERROR(CR%1$d/(BI%1$d/BH%1$d),\"\")",
+			"inputType": "Decimal"
+		},
+		"mark_down": {
+			"decimals": "2",
+			"digits": "10",
+			"excelColumnName": "CT",
+			"inputType": "Decimal"
+		},
+		"promo_start": {
+			"excelColumnName": "CU",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"promo_end": {
+			"excelColumnName": "CV",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"pass_through": {
+			"decimals": "2",
+			"digits": "5",
+			"excelColumnName": "CW",
+			"formula": "IFERROR(CR%1$d/CE%1$d,0)",
+			"inputType": "Decimal"
+		},
+		"new_multiple": {
+			"excelColumnName": "CX",
+			"inputType": "String"
+		},
+		"new_retail": {
+			"excelColumnName": "CY",
+			"inputType": "String"
+		},
+		"new_edlp_gp_pctg": {
+			"excelColumnName": "CZ",
+			"formula": "IFERROR(((CW%1$d/MAX(CV%1$d,%1$d))-AZ%1$d)/(CW%1$d/MAX(CV%1$d,%1$d)),\"\")",
+			"inputType": "String"
+		},
+		"new_promo_multiple": {
+			"excelColumnName": "DA",
+			"inputType": "String"
+		},
+		"new_promo_retail": {
+			"excelColumnName": "DB",
+			"inputType": "String"
+		},
+		"new_promo_gppctg": {
+			"excelColumnName": "DC",
+			"formula": "IFERROR(((CZ%1$d/MAX(CY%1$d,%1$d))-CG%1$d)/(CZ%1$d/MAX(CY%1$d,%1$d)),\"\")",
+			"inputType": "String"
+		},
+		"new_passthrough": {
+			"excelColumnName": "DD",
+			"formula": "IFERROR(IF(ISNUMBER(CZ%1$d),IF(ISNUMBER(CW%1$d),((CW%1$d/MAX(CV%1$d,%1$d))-(CZ%1$d/MAX(CY%1$d,%1$d)))/CE%1$d,((BI%1$d/MAX(BH%1$d,%1$d))-(CZ%1$d/MAX(CY%1$d,%1$d)))/CE%1$d),\"\"),\"\")",
+			"inputType": "String"
+		},
+		"compet_code": {
+			"excelColumnName": "DE",
+			"inputType": "String"
+		},
+		"price_chk_date": {
+			"excelColumnName": "DF",
+			"inputDateFormat": "yyyy-MM-dd",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		},
+		"comp_reg_mult": {
+			"decimals": "0",
+			"digits": "2",
+			"excelColumnName": "DG",
+			"inputType": "Decimal"
+		},
+		"com_reg_price": {
+			"decimals": "2",
+			"digits": "7",
+			"excelColumnName": "DH",
+			"inputType": "Decimal"
+		},
+		"reg_cpi": {
+			"excelColumnName": "DI",
+			"formula": "IFERROR(IF(DF%1$d\u003e0,((BI%1$d/MAX(BH%1$d,%1$d))-(DF%1$d/MAX(DE%1$d,%1$d)))/(BI%1$d/MAX(BH%1$d,%1$d)),\"\"),\"\")",
+			"inputType": "String"
+		},
+		"comp_ad_mult": {
+			"decimals": "0",
+			"digits": "2",
+			"excelColumnName": "DJ",
+			"inputType": "Decimal"
+		},
+		"comp_ad_price": {
+			"decimals": "2",
+			"digits": "7",
+			"excelColumnName": "DK",
+			"inputType": "Decimal"
+		},
+		"comments": {
+			"excelColumnName": "DL",
+			"inputType": "String"
+		},
+		"modified_flag": {
+			"excelColumnName": "DM",
+			"formula": "IF(OR(SUM(CW%1$d,CZ%1$d)>0,TRIM(DJ%1$d)<>\"\"),\"Y\",\"\")",
+			"inputType": "String"
+		},
+		"rog_and_cig": {
+			"ignoreInOutput": "true",
+			"excelColumnName": "DN",
+			"inputType": "String"
+		},
+		"allowance_counts": {
+			"ignoreInOutput": "true",
+			"excelColumnName": "DO",
+			"inputType": "String"
+		},
+		"report_date": {
+			"ignoreInOutput": "true",
+			"inputDateFormat": "yyyy-MM-dd",
+			"excelColumnName": "DP",
+			"inputType": "Date",
+			"outputDateFormat": "MM/dd"
+		}
+	},
+	"columnNames": [
+		"division_id",
+		"rpt_group",
+		"promo_no_allowance",
+		"allow_no_promo",
+		"missing_allowance",
+		"cost_change",
+		"ad_plan",
+		"less_10_promo",
+		"less_10_allowance",
+		"greater_100_pass_through",
+		"t_09_retail",
+		"lead_item",
+		"dominant_price_area",
+		"t_oob",
+		"sskvi",
+		"group_cd",
+		"group_nm",
+		"smic",
+		"smic_name",
+		"rog",
+		"price_area_id",
+		"pa_name",
+		"pricing_role",
+		"oob_gap_id",
+		"div_promo_grp_cd",
+		"loc_common_retail_cd",
+		"vendor_name",
+		"vend_nbr",
+		"vend_sub_acct_nbr",
+		"cost_area_id",
+		"manuf",
+		"upc_id",
+		"corp_item_cd",
+		"item_description",
+		"dst",
+		"facility",
+		"dst_stat",
+		"rtl_stat",
+		"buyer_nm",
+		"vend_conv_fctr",
+		"t_pack_whse_qty",
+		"size_dsc",
+		"row_offset",
+		"upc_13_wk_avg_sales",
+		"upc_13_wk_avg_qty",
+		"upc_13_wk_avg_rtl",
+		"t_rank_by_rog_and_cpc",
+		"pct_acv_stores",
+		"t_cpc_13_wk_avg_sales",
+		"t_cpc_13_wk_avg_qty",
+		"t_cpc_13_wk_avg_rtl",
+		"pnd_cost_change_vnd",
+		"pnd_ven_date_effective",
+		"new_recc_reg_retail",
+		"vendor_unit_cost",
+		"unit_item_billing_cost",
+		"prev_retail_price_fctr",
+		"previous_retail_price",
+		"prev_retail_effective_date",
+		"pending_edlp_mult",
+		"pending_edlp_retail",
+		"pending_edlp_chg_date",
+		"pending_gp_pctg",
+		"reg_retail_price_fctr",
+		"reg_retail",
+		"t_price_per",
+		"t_unit",
+		"reg_gp_pctg",
+		"case_allow_count",
+		"case_allow_amt",
+		"case_allow_amt_per_unit",
+		"case_start_date",
+		"case_end_date",
+		"s2s_allow_count",
+		"s2s_allow_amt",
+		"s2s_allow_amt_per_unit",
+		"s2s_start_date",
+		"s2s_end_date",
+		"scan_allow_count",
+		"scan_allow_amt",
+		"scan_start_date",
+		"scan_end_date",
+		"redem_scan_allow_count",
+		"redem_allow_amt",
+		"redem_start_date",
+		"redem_end_date",
+		"total_allow_unit",
+		"t_allowance_pctg",
+		"net_cost_with_allow",
+		"promo_multiple",
+		"promo_price",
+		"coupon_method",
+		"min_purch",
+		"limit_per_txn",
+		"promo_gp_pctg",
+		"net_promo_price",
+		"price_per",
+		"t2_unit",
+		"t_markdown_pctg",
+		"mark_down",
+		"promo_start",
+		"promo_end",
+		"pass_through",
+		"new_multiple",
+		"new_retail",
+		"new_edlp_gp_pctg",
+		"new_promo_multiple",
+		"new_promo_retail",
+		"new_promo_gppctg",
+		"new_passthrough",
+		"compet_code",
+		"price_chk_date",
+		"comp_reg_mult",
+		"com_reg_price",
+		"reg_cpi",
+		"comp_ad_mult",
+		"comp_ad_price",
+		"comments",
+		"modified_flag",
+		"rog_and_cig",
+		"allowance_counts",
+		"report_date"
+	]
+}

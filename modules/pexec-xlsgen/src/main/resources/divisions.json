@@ -1,0 +1,60 @@
+{
+	"divisions": {
+		"5": {
+			"name": "Denver",
+			"description": ""
+		},
+		"17": {
+			"name": "SouthWest",
+			"description": ""
+		},
+		"19": {
+			"name": "Portland",
+			"description": ""
+		},
+		"20": {
+			"name": "Southern",
+			"description": ""
+		},
+		"25": {
+			"name": "NorCal",
+			"description": ""
+		},
+		"27": {
+			"name": "Seattle",
+			"description": ""
+		},
+		"29": {
+			"name": "SoCal",
+			"description": ""
+		},
+		"30": {
+			"name": "InterMountain",
+			"description": ""
+		},
+		"35": {
+			"name": "Eastern",
+			"description": ""
+		},
+		"33": {
+			"name": "Shaws",
+			"description": ""
+		},
+		"32": {
+			"name": "Jewel",
+			"description": ""
+		},
+		"15": {
+			"name": "United",
+			"description": ""
+		},
+		"24": {
+			"name": "Haggen",
+			"description": ""
+		},
+		"34": {
+			"name": "Acme",
+			"description": ""
+		}
+	}
+}

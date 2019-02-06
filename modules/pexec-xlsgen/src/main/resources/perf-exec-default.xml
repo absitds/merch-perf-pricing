@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<configuration>
+	 <!--<property>
+	 <name>mapreduce.framework.name</name>
+	 <value>local</value>
+	 </property>
+	 <property>
+	 <name>mapreduce.local.map.tasks.maximum</name>
+	 <value>20</value>
+	 </property>
+	 <property>
+	 <name>mapreduce.cluster.local.dir</name>
+	 <value>/home/exa00082/Downloads/mapreduce-local</value>
+	 </property>-->
+</configuration>
